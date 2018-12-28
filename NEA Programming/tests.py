@@ -62,21 +62,20 @@ class StartPage(tk.Frame):
 class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        tk.Frame.config(self, bg="grey")
         label = tk.Label(self, text="Page One", font=("Times New Roman", 20))
-        label.pack(pady=10, padx=10)
+        label.grid(pady=10, padx=10)
 
         button1 = ttk.Button(self, text="Back to home",
                              command=lambda: controller.show_frame(StartPage))
-        button1.pack()
+        button1.grid()
 
         button2 = ttk.Button(self, text="Visit page two",
                              command=lambda: controller.show_frame(PageTwo))
-        button2.pack()
+        button2.grid()
 
         button3 = ttk.Button(self, text="Visit page three",
                              command=lambda: controller.show_frame(PageThree))
-        button3.pack()
+        button3.grid()
 
 
 class PageTwo(tk.Frame):
