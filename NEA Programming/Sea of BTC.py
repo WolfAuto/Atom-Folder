@@ -7,7 +7,7 @@ class SeaofBTCapp(tk.Tk):
 
         tk.Tk.__init__(self, *args, **kwargs)
         container= tk.Frame(self)
-        
+
         container.pack(side="top", fill="both", expand=True)
 
         container.grid_rowconfigure(0, weight=1)
@@ -40,6 +40,6 @@ class PageOne(tk.Frame):
 
     def __init__(self,parent, controller):
         tk.Frame.__init__(self, parent)
-        
+
 app = SeaofBTCapp()
 app.mainloop()

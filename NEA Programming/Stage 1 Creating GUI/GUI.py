@@ -39,16 +39,18 @@ class MainMenu(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
 
-        label = tk.Label(self, text="Start Page", font=("Times New Roman", 20))
-        label.pack(pady=10, padx=10)
+        label = tk.Label(self, text="Maths Pro", font=("Times New Roman", 70))
+        label.grid(row=0, column=1, columnspan=2)
+        label.grid_rowconfigure(0, weight = 1)
+        label.grid_columnconfigure(0, weight = 1)
 
-        button1 = ttk.Button(self, text="Visit Page 1",
+        button1 = ttk.Button(self, text="Register",
                              command=lambda: controller.show_frame(RegistrationForm1))
-        button1.pack()
+        button1.grid(row=4, column=4)
 
-        button2 = ttk.Button(self, text="Visit Page Two",
+        button2 = ttk.Button(self, text="Login",
                              command=lambda: controller.show_frame(PageTwo))
-        button2.pack()
+        button2.grid(row=4, column=5)
 
 
 class RegistrationForm1(tk.Frame):
@@ -100,7 +102,7 @@ class RegistrationForm1(tk.Frame):
 class PageTwo(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="Page Two", font=("Times New Roman", 20))
+        label = tk.Label(self, text="Page Two", font=("Times New Roman", 50))
         label.grid(pady=10, padx=10, sticky="n")
 
         button1 = ttk.Button(self, text="Back to home",
